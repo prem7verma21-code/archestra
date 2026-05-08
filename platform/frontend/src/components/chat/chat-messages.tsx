@@ -1428,7 +1428,7 @@ const MessageTool = memo(
     const output = mcpOutput?.content ?? rawOutput;
     const errorText = getToolErrorText({ part, toolResultPart });
 
-    const isApprovalRequested = part.state === "approval-requested";
+    const isApprovalRequested = part.state === "approval-requested" && !part.approval?.resolved;
     const isToolDenied = part.state === "output-denied";
     const hasInput = part.input && Object.keys(part.input).length > 0;
     const hasContent = Boolean(
@@ -1800,12 +1800,19 @@ const getHeaderState = ({
   state,
   toolResultPart,
   errorText,
+  part, // <-- I ADDED THIS LINE
 }: {
   state: ToolUIPart["state"] | DynamicToolUIPart["state"];
   toolResultPart: ToolUIPart | DynamicToolUIPart | null;
   errorText: string | undefined;
+  part: any; // <-- USED IT HERE IN THIS LINE
 }) => {
-  return getToolHeaderState({ state, toolResultPart, errorText });
+  return getToolHeaderState({ 
+    state, 
+    toolResultPart, 
+    errorText, 
+    approval: "approval" in part ? part.approval : undefined // <-- ADD THIS LINE
+  });
 };
 
 /**

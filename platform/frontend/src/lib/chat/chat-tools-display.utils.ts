@@ -96,13 +96,22 @@ export function getToolHeaderState({
   state,
   toolResultPart,
   errorText,
+  approval, // <--I ADDED THIS LINE
 }: {
   state: ToolUIPart["state"] | DynamicToolUIPart["state"];
   toolResultPart: ToolUIPart | DynamicToolUIPart | null;
   errorText: string | undefined;
+  approval?: { resolved?: boolean; approved?: boolean }; // <-- ADDED THIS LINE TOO
 }) {
   if (errorText) return "output-error" as const;
   if (toolResultPart) return "output-available" as const;
+  
+  // THE FIX: If the database says it's resolved, show "Responded" 
+  // instead of letting it fall back to "Requested".
+  if (approval?.resolved || approval?.approved !== undefined) {
+    return "approval-responded" as const;
+  }
+
   return state;
 }
 
