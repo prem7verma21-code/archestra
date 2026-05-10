@@ -241,3 +241,7 @@ To unblock real contributors without re-opening the floodgates, sign in via GitH
 - @franklin52448-max
 - @swayansu951
 - @letsdeepchat
+- @igladhan
+- @myceldevelopment-ctrl
+- @sillasvidal
+- @harrycena
