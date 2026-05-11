@@ -259,3 +259,11 @@ To unblock real contributors without re-opening the floodgates, sign in via GitH
 - @emulatronicGIT
 - @Prabhukiran161
 - @joelhagvall
+- @SAKETH11111
+- @nammahari
+- @devmike01
+- @shogun444
+- @Prajwal6898
+- @ritwikareddykancharla
+- @macomoroni
+- @grp06
