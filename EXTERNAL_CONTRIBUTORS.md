@@ -245,3 +245,17 @@ To unblock real contributors without re-opening the floodgates, sign in via GitH
 - @myceldevelopment-ctrl
 - @sillasvidal
 - @harrycena
+- @harryautomazione
+- @w2jmoe
+- @ahras25
+- @asenseofpradhyu
+- @thefuturrjfhejh
+- @jeepvan
+- @debaa98
+- @jchatelet
+- @whisp0
+- @seungpyoson
+- @ephraimduncan
+- @emulatronicGIT
+- @Prabhukiran161
+- @joelhagvall
